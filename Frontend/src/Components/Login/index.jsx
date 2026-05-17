@@ -22,7 +22,8 @@ const Login = () => {
     event.preventDefault()
     setLoading(true)
     setError("")
-    const url = "http://localhost:5000/api/auth/login";
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const url = `${API_URL}/api/auth/login`;
     const userDetails = {
       email,
       password

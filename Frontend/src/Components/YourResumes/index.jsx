@@ -39,7 +39,8 @@ const YourResumes = () => {
     try {
       setLoadingHistory(true);
       setError("");
-      const response = await fetch("http://localhost:5000/api/resume/history", {
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const response = await fetch(`${API_URL}/api/resume/history`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -83,8 +84,9 @@ const YourResumes = () => {
       setError("");
  
       // STEP 1️⃣ Upload Resume
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
       const uploadResponse = await fetch(
-        "http://localhost:5000/api/resume/upload",
+        `${API_URL}/api/resume/upload`,
         {
           method: "POST",
           headers: {
@@ -110,7 +112,7 @@ const YourResumes = () => {
       };
  
       const analyzeResponse = await fetch(
-        "http://localhost:5000/api/resume/analyze",
+        `${API_URL}/api/resume/analyze`,
         {
           method: "POST",
           headers: {
