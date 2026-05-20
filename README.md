@@ -27,55 +27,12 @@ BeatTheBots is a full-stack AI-powered application designed to help job seekers 
 
 ---
 
-## 💻 Getting Started (Local Development)
+## 🌐 Live Demo
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Boomi12/BeatTheBots.git
-cd BeatTheBots
-```
-
-### 2. Backend Setup
-```bash
-cd Backend
-npm install
-```
-Create a `.env` file inside the `/Backend` directory and add the following keys:
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-GEMINI_API_KEY=your_google_gemini_key
-```
-Run the backend server:
-```bash
-npm start
-```
-
-### 3. Frontend Setup
-Open a new terminal window:
-```bash
-cd Frontend
-npm install
-```
-Build or start the frontend development server:
-```bash
-npm run dev
-```
-
-The application will be running locally at `http://localhost:5173`. 
+Experience the ATS Resume Analyzer in action instantly:
+**[https://beat-the-bots.vercel.app/]**
 
 ---
 
-## 🌍 Deployment
-
-You can deploy the separated systems independently for free:
-- **Frontend** should deploy seamlessly on **Vercel** (Set Root Directory to `Frontend`). Vercel requires environmental variable `VITE_API_URL` leading to your Render URL.
-- **Backend API** runs smoothly on **Render** as a Web Service (Set Root Directory to `Backend`). Store your local `.env` data directly in Render's environment variables dashboard.
-
-*Make sure not to upload your `.env` variables to GitHub!*
-
-## 📝 License
-This project is open-source. Created to empower jobseekers worldwide.
 
 ✨ Made with ❤️ ✨
